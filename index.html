@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sally Student's</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="application-root"></div>
+    <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script
+        src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script type="text/babel">
+        function App(props) {
+	        console.log(props)
+	        return (
+		        <main>
+			        {props.children}
+		        </main>
+	        );
+        }
+
+        ReactDOM.render(
+	        <App className='my-class'>
+                <header className="center title">
+                    <div className='header-position'>
+                        <h1>Sally Student</h1>
+                        <h2 className="margin-bottom">The greatest decision you'll ever make</h2>
+                    </div>
+                </header>
+                <section className="education">
+                    <header className="center">
+                        <h3>Education</h3>
+                    </header>
+                    <div className="education-details">
+                        <p>University of Scotland</p>
+                        <p>Bachelors in Resume Studies</p>
+                        <p>1950-1954</p>
+                    </div>
+                </section>
+                <section className="employment">
+                    <header className="center">
+                        <h3>Employment History</h3>
+                    </header>
+                    <div className="job-description">
+                        <div className="title-and-year">
+                            <h4>Google - Level II Googler</h4>
+                            <h5>Dec 2000 - Jan 2001</h5>
+                        </div>
+                        <ul>
+                            <li>Made sure everything was Googled properly on a daily basis</li>
+                            <li>Followed people around and made them uncomfortable for business purposes</li>
+                            <li>Screamed at the top of my lungs until my throat was too hoarse to continue</li>
+                        </ul>
+                    </div>
+                    <div className="job-description">
+                        <div className="title-and-year">
+                            <h4>McDonald's - Burger Professional</h4>
+                            <h5>Aug 1940 - Nov 2000</h5>
+                        </div>
+                        <ul>
+                            <li>Engineered 'McDouble' cheeseburger which ultimately became the healthiest cheeseburger on the planet</li>
+                            <li>The McDouble is the most nutritional and bountiful food on the planet</li>
+                            <li>Worked hard at various tasks that needed to be done</li>
+                        </ul>
+                    </div>
+                </section>
+                <address className="contact center">
+                    <header>
+                        <h3>Contact</h3>
+                    </header>
+                    <img className="sallyimage" src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" alt="An image of Sally Student"></img>
+                    <h4>Sally Student</h4>
+                    <p>Email: <a href="mailto:sallystudent@gmail.com?subject=Please, God, Let us hire you!!"target="_blank">sallystudent@gmail.com</a></p>
+                    <p>Phone: (925) 918-2720</p>
+                </address>
+            </App>,
+	        document.querySelector('#application-root')
+        );
+    </script>
+</body>
+</html>
